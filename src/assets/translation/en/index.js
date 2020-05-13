@@ -1,8 +1,8 @@
 import main from './main.json';
 import cases from './cases.json';
 
-const fr = {
-  ...main, ...cases,
+const en = {
+  ...main, cases,
 };
 
-export default fr;
+export default en;
