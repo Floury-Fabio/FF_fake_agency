@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl';
 import messagesFr from 'assets/translation/fr';
 import messagesEn from 'assets/translation/en';
+import CasesContext from './casesContext.jsx'
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -23,16 +24,19 @@ const App = () => {
 
     return (
       <Router>
-      <IntlProvider locale={{language: language, setLanguage: setLanguage}} messages={messages[language]} setLanguage={setLanguage}>
-        <>
-          <Navbar />        
-            <Switch>
-              <Route path="/agency"> <About /> </Route>
-              <Route exact path="/works"> <Works /> </Route>
-              <Route exact path="/"> <Home /> </Route>
-            </Switch>
-        </>
-      </IntlProvider>
+        <IntlProvider locale={{language: language, setLanguage: setLanguage}} messages={messages[language]} setLanguage={setLanguage}>
+          <CasesContext.Provider value={{cases: ['platon', 'solane', 'sedale']}}>
+            <>
+              <Navbar />        
+                <Switch>
+                  <Route path="/agency"> <About /> </Route>
+                  <Route exact path="/"> <Home /> </Route>
+                  <Route exact path="/works"> <Works /> </Route>
+                  <Route exact path="/works/:work_id"> <StudyCase /> </Route>
+                </Switch>
+            </>
+          </CasesContext.Provider>
+        </IntlProvider>
       </Router>
     )
 }

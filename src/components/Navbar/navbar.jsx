@@ -16,7 +16,7 @@ function Navbar() {
             <Link to="/agency">About</Link>
           </li>
           <li className="nav-item">
-            <Link to="works/">works</Link>
+            <Link to="/works">works</Link>
           </li>
         </ul>
 
