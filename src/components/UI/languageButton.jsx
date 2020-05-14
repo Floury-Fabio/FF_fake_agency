@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {injectIntl} from 'react-intl'
 import flagFr from 'assets/img/flagFr.png'
 import flagEn from 'assets/img/flagEn.png'
+import './languageButton.scss'
 
 
 function LanguageButton({intl}) {
@@ -30,7 +31,7 @@ function LanguageButton({intl}) {
     }
   }
   return(
-    <button onClick={change}> <img id='flag' src={src} alt='flag'/> </button>
+    <button id='flag' className='p-0' onClick={change}> <img src={src} alt='flag'/> </button>
   )
 }
 

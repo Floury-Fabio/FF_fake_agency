@@ -3,7 +3,9 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 
 function About (){
   return (
-    <p> <FormattedMessage id="main.about.title" /> </p>
+    <div className='container mt-3'>
+      <p> <FormattedMessage id="main.about.title" /> </p>
+    </div>      
   )
 }
 

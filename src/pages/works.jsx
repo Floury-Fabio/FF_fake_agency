@@ -13,10 +13,10 @@ function Works ({cases}){
     )
   }
   return (
-    <>
-    <p> <FormattedMessage id="main.works.title" /> </p>
-    {initWorkList()}
-    </>
+    <div className='container mt-3'>
+      <p> <FormattedMessage id="main.works.title" /> </p>
+      {initWorkList()}
+    </div>
   )
 }
 

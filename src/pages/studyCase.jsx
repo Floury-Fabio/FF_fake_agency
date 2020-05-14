@@ -22,10 +22,10 @@ function StudyCase({intl}){
 
   return (
 
-    <>
+    <div className='container mt-3'>
       <h4><FormattedMessage id={`cases.${study_id}.title`} /></h4>
       {initListContent()}
-    </>
+    </div>
   )
 }
 
