@@ -12,6 +12,7 @@ import Navbar from './components/Navbar/navbar.jsx'
 import Home from './pages/home.jsx'
 import About from './pages/about.jsx'
 import Works from './pages/works.jsx'
+import StudyCase from './pages/studyCase.jsx'
 
 const messages = {
     fr: messagesFr,
@@ -25,14 +26,14 @@ const App = () => {
     return (
       <Router>
         <IntlProvider locale={{language: language, setLanguage: setLanguage}} messages={messages[language]} setLanguage={setLanguage}>
-          <CasesContext.Provider value={{cases: ['platon', 'solane', 'sedale']}}>
+          <CasesContext.Provider value={{cases: ['platon', 'solane', 'sedal']}}>
             <>
               <Navbar />        
                 <Switch>
                   <Route path="/agency"> <About /> </Route>
                   <Route exact path="/"> <Home /> </Route>
                   <Route exact path="/works"> <Works /> </Route>
-                  <Route exact path="/works/:work_id"> <StudyCase /> </Route>
+                  <Route exact path="/works/:study_id"> <StudyCase /> </Route>
                 </Switch>
             </>
           </CasesContext.Provider>
